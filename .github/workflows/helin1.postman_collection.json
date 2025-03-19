@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "76f5f1ac-726a-4e73-ac8c-ff90038913f9",
+		"name": "helin1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16940579"
+	},
+	"item": [
+		{
+			"name": "test_1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.rijksmuseum.nl/api/en/collection?key=0fiuZFh4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"rijksmuseum",
+						"nl"
+					],
+					"path": [
+						"api",
+						"en",
+						"collection"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "0fiuZFh4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
